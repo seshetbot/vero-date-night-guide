@@ -51,7 +51,7 @@
       {name:"Orchids Thai & Sushi",area:"Central Vero",review:"Well-rated modern Thai/Sushi for a different date-night style.",reviewLink:"https://www.yelp.com/biz/orchids-thai-and-sushi-vero-beach",reserveLink:"https://www.opentable.com/s?term=Orchids%20Thai%20and%20Sushi%20Vero%20Beach",websiteLink:"https://www.facebook.com/OrchidsVeroBeach", address:"962 14th Ln, Vero Beach, FL 32960"}
     ];
 
-    const uber = (address) => `https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=${encodeURIComponent(address)}`;
+    const uber = (address) => `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address)}`;
     const cards = document.getElementById('cards');
     cards.innerHTML = places.map((p,i)=>`
       <article class="card">
