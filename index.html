@@ -25,30 +25,15 @@
 <body>
   <div class="wrap">
     <h1>💙 Date Night in Vero Beach (John's Island Area)</h1>
-    <div class="sub">10 curated spots with review links, reservation links, and one-tap Uber links.</div>
+    <div class="sub">Filtered list: only restaurants with direct OpenTable reservation links from the restaurant website flow.</div>
     <div class="grid" id="cards"></div>
     <div class="foot">Built for Jeff • Review snapshots are based on recent public listings and linked sources.</div>
   </div>
 
   <script>
     const places = [
-      {
-        name:"Ocean Grill",
-        area:"Beachside / near John's Island",
-        review:"Consistently popular seafood/chophouse vibe with long-standing local reputation.",
-        reviewLink:"https://www.yelp.com/biz/ocean-grill-vero-beach",
-        reserveLink:"https://www.opentable.com/s?term=Ocean%20Grill%20Vero%20Beach",
-        websiteLink:"https://www.ocean-grill.com/", address:"1050 Beachland Blvd, Vero Beach, FL 32963"
-      },
-      {name:"Citrus Grillhouse",area:"Ocean Drive",review:"Modern coastal menu and sunset/date-night atmosphere.",reviewLink:"https://www.yelp.com/biz/citrus-grillhouse-vero-beach",reserveLink:"https://www.opentable.com/s?term=Citrus%20Grillhouse%20Vero%20Beach",websiteLink:"https://www.citrusgrillhouse.com/", address:"1050 Easter Lily Ln, Vero Beach, FL 32963"},
-      {name:"Maison Martinique",area:"South Beach",review:"Romantic French-Caribbean setting, strong special-occasion reviews.",reviewLink:"https://www.yelp.com/biz/maison-martinique-vero-beach",reserveLink:"https://www.opentable.com/s?term=Maison%20Martinique%20Vero%20Beach",websiteLink:"https://www.facebook.com/maisonmartiniquevero", address:"1601 S Ocean Dr, Vero Beach, FL 32963"},
       {name:"Cobalt (Vero Beach Hotel & Spa)",area:"Kimpton Vero Beach",review:"Upscale oceanfront dining with polished service and date-night energy.",reviewLink:"https://www.yelp.com/biz/cobalt-vero-beach",reserveLink:"https://www.opentable.com/r/cobalt-vero-beach",websiteLink:"https://www.cobaltrestaurant.com/", address:"3500 Ocean Dr, Vero Beach, FL 32963"},
-      {name:"Heaton's Vero Beach",area:"Kimpton Vero Beach",review:"Great cocktails + beachfront ambience for a relaxed date night.",reviewLink:"https://www.yelp.com/biz/heatons-vero-beach",reserveLink:"https://www.opentable.com/r/heatons-vero-beach",websiteLink:"https://www.heatonsverobeach.com/",address:"3500 Ocean Dr, Vero Beach, FL 32963"},
-      {name:"The Tides Restaurant",area:"The Tides complex",review:"Classic fine-dining choice with strong repeat local following.",reviewLink:"https://www.yelp.com/biz/the-tides-vero-beach",reserveLink:"https://www.opentable.com/s?term=The%20Tides%20Vero%20Beach",websiteLink:"https://www.tidesofvero.com/", address:"3103 Cardinal Dr, Vero Beach, FL 32963"},
-      {name:"Scampi Grill",area:"Barrier island",review:"Intimate, chef-driven seafood/Italian style that reviews well for couples.",reviewLink:"https://www.yelp.com/biz/scampi-grill-vero-beach",reserveLink:"https://www.opentable.com/s?term=Scampi%20Grill%20Vero%20Beach",websiteLink:"https://www.scampigrill.com/", address:"1917 14th Ave, Vero Beach, FL 32960"},
-      {name:"Avanzare Italian Dining",area:"Vero Beach",review:"Romantic Italian option often praised for service and consistency.",reviewLink:"https://www.yelp.com/biz/avanzare-italian-dining-vero-beach",reserveLink:"https://www.opentable.com/s?term=Avanzare%20Italian%20Dining%20Vero%20Beach",websiteLink:"https://www.facebook.com/AvanzareItalianDining/", address:"2183 U.S. 1, Vero Beach, FL 32960"},
-      {name:"Trattoria Dario",area:"Near central Vero",review:"Cozy upscale Italian with strong date-night appeal.",reviewLink:"https://www.yelp.com/biz/trattoria-dario-vero-beach",reserveLink:"https://www.opentable.com/s?term=Trattoria%20Dario%20Vero%20Beach",websiteLink:"https://trattoriadario.com/", address:"1914 14th Ave, Vero Beach, FL 32960"},
-      {name:"Orchids Thai & Sushi",area:"Central Vero",review:"Well-rated modern Thai/Sushi for a different date-night style.",reviewLink:"https://www.yelp.com/biz/orchids-thai-and-sushi-vero-beach",reserveLink:"https://www.opentable.com/s?term=Orchids%20Thai%20and%20Sushi%20Vero%20Beach",websiteLink:"https://www.facebook.com/OrchidsVeroBeach", address:"962 14th Ln, Vero Beach, FL 32960"}
+      {name:"Heaton's Vero Beach",area:"Kimpton Vero Beach",review:"Great cocktails + beachfront ambience for a relaxed date night.",reviewLink:"https://www.yelp.com/biz/heatons-vero-beach",reserveLink:"https://www.opentable.com/r/heatons-vero-beach",websiteLink:"https://www.heatonsverobeach.com/",address:"3500 Ocean Dr, Vero Beach, FL 32963"}
     ];
 
     const uber = (address) => `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address)}`;
